@@ -1,0 +1,41 @@
+given input file 
+-> read characters into a priority queue
+    -> implemented as a linked list
+-> generate the huffman tree based off that queue
+-> generate the dictionary based off that huffman tree
+-> generate the output file based off that dictionary
+
+node structure:
+    node *left, *right, *next;
+    char *str;
+    int freq;
+
+queue structure:
+    node *front;
+    int size;
+
+methods:
+
+// Given a string to represent, this function should return a newly allocated node
+// containing that string after properly setting all of the node fields.
+node *make_node(str);
+
+// Given a node in a linked list, this function should 
+// create a make a new node and append it onto the end.
+void append_node(head, new);
+
+// Given a head node in a linked list, this function
+// should count the number of nodes the list contains.
+int length(head);
+
+// Given a queue, this function should return the node in front of the queue.
+node *peek(queue);
+
+// Given a queue, this function should enqueue the given node into the back of the queue
+void enqueue(queue, node);
+
+// Given a queue, this function should return the 
+// first element and change the queue accordingly.
+node *dequeue(queue);
+
+
